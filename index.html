@@ -1,6 +1,6 @@
 <html lang = "en">
 	<head>
-		<title>AlbumFinder</title>
+		<title>Albinder</title>
 		<meta charset = "utf-8">
 
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1">
@@ -10,6 +10,9 @@
 		<!--animate.css CDN-->
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
 		<!--Bootstrap theme from https://themesguide.github.io/top-hat/dist/hollar/theme.css-->
+		
+		<link href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap" rel="stylesheet" />
+		<link rel="stylesheet" href="static/css/style.css" />
 		
 		<!--Font awesome-->				
 		<script src="https://kit.fontawesome.com/18816a347c.js" crossorigin="anonymous"></script>
@@ -22,19 +25,24 @@
 					<div class="col-12">
 						<div class="text-center m-0 vh-100 d-flex flex-column justify-content-center text-light">
 							<div class = "row">
-								<h1 class="display-4 col-lg-6 mx-auto landing-content">
-									Album Finder
+								<h1 id = "title" class="display-4 col-lg-6 mx-auto landing-content">
+									Albinder
 								</h1>
 							</div>
 							
-							<div class = "row mb-5 mt-5">
-								<p id = "album-info" class="h4 col-lg-6 mx-auto">
-									
+							<div class = "row mt-5">
+								<p id = "album-info" class="col-lg-6 mx-auto">
+								 </p>
+								 
+							</div>
+							
+							<div class = "row mb-5">
+								<p id = "list-info" class="col-lg-6 mx-auto">
 								 </p>
 							</div>
 									
 							<div class = "row">
-								<button id = "rerollBtn" class = "btn btn-light col-md-3 col-sm-6 mx-auto mb-2">Reroll</button>
+								<button id = "rerollBtn" class = "btn btn-light mx-auto mb-2"><i class="fas fa-sync-alt"></i></button>
 							</div>
 						</div>
 					</div>
@@ -51,6 +59,7 @@
 		<!-- Bootstrap.js CDN -->
 		<script src = "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 		<script src = "static/js/fantano_list.js"></script>
+		<script src = "static/js/pitchfork_list.js"></script>
 		<script src = "static/js/functions.js"></script>
 	</body>
 </html>
