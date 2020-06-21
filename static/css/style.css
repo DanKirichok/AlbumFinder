@@ -1,7 +1,14 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
 #title{
 	font-family: 'Major Mono Display', monospace;
 }
 
+p {
+	font-family: 'Montserrat', sans-serif;
+}
+
+/* cool background from https://codepen.io/BjornRombaut/pen/mOLGgX */
 .hero {
 	 background-color: #0040c1;
 	 position: relative;

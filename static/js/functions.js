@@ -8,7 +8,10 @@ var prevAlbum = "";
 
 $("#rerollBtn").click(function(){
 	var listChooser = randomIntFromInterval(0, numLists - 1);
-		
+	
+	var setAlbum = "";
+	var setList = "";
+	
 	if (listChooser == 0) {
 		var curAlbum = pitchfork_list[randomIntFromInterval(0, pitchfork_list.length)];
 		
@@ -16,8 +19,8 @@ $("#rerollBtn").click(function(){
 			curAlbum = pitchfork_list[randomIntFromInterval(0, pitchfork_list.length)];
 		}
 		
-		$("#album-info").text(curAlbum);
-		$("#list-info").text("Pitchfork");
+		setAlbum = curAlbum;
+		setList = "Pitchfork";
 	} else if (listChooser == 1) {
 		var curAlbum = fantano_list[randomIntFromInterval(0, fantano_list.length)];
 		
@@ -25,7 +28,22 @@ $("#rerollBtn").click(function(){
 			curAlbum = fantano_list[randomIntFromInterval(0, fantano_list.length)];
 		}
 		
-		$("#album-info").text(fantano_list[randomIntFromInterval(0, fantano_list.length)]);
-		$("#list-info").text("Fantano");
+		setAlbum = curAlbum;
+		setList = "Fantano";
 	}
+	
+	$(".sel-album").addClass("animate__fadeOut");
+		
+	setTimeout(function() {
+		$(".sel-album").css("visibility", "hidden");
+	}, 500);
+	
+	setTimeout( function() {
+		$(".sel-album").css("visibility", "visible");
+		$(".sel-album").removeClass("animate__fadeOut");
+		$(".sel-album").addClass("animate__fadeIn"); 
+		$(".sel-album").css("visibility", "visible");
+		$("#album-info").text(setAlbum);
+		$("#list-info").text(setList);
+	}, 750);
 });
